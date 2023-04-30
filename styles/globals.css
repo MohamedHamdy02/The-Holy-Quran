@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @layer components {
-  .item-container:hover {
-    border: 1px solid #2ca4ab;
+  #theme .item-container:hover {
+    border: 5px solid #2ca4ab;
     background-color: #f8f9fa;
   }
   .item-container:hover p {

@@ -1,3 +1,4 @@
+import { useThemeContext } from "@/Context/ThemeContext";
 import Header from "@/components/Header/Header";
 import Loading from "@/components/Loading/Loading";
 import { GetServerSideProps } from "next";
@@ -30,6 +31,7 @@ type QuranArrayProps = {
 };
 
 const Home = ({ QuranDetails, QuranMetaData }: QuranArrayProps) => {
+  const { theme } = useThemeContext();
   const [searchInput, setSearchInput] = useState<string>("");
 
   const [searchSurah, setSearchSurah] = useState<{}>({});
@@ -67,7 +69,7 @@ const Home = ({ QuranDetails, QuranMetaData }: QuranArrayProps) => {
       {load ? (
         <Loading />
       ) : (
-        <div>
+        <div className={`${theme === "light" ? "bg-white" : "bg-[#1d2222]"}`}>
           <Header
             quranMeta={searchInput ? searchSurah : quranMeta}
             surahDetail={surahDetail}

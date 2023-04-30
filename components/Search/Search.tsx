@@ -8,8 +8,8 @@ type Props = {
 
 const Search = ({ searchInput, onChangeHandler }: Props) => {
   return (
-    <div className="relative text-center w-[81%] m-auto mt-20">
-      <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+    <div className="relative text-center w-[81%] m-auto pt-20">
+      <div className="absolute top-[83px] bottom-0 left-0 flex items-center pl-3 pointer-events-none">
         <AiOutlineSearch className="w-6 h-6 text-gray-500 dark:text-gray-400" />
       </div>
       <input
