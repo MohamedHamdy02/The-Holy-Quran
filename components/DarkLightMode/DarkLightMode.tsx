@@ -7,75 +7,30 @@ import { MdOutlineLightMode } from "react-icons/md";
 const DarkLightMode = () => {
   const { theme, toggleTheme } = useThemeContext();
   return (
-    <div suppressHydrationWarning={true} className="">
+    <div>
       <ReactSwitch
-        suppressHydrationWarning={true}
         onChange={toggleTheme}
         checked={theme === "light"}
         onColor="#0000D1"
         className="react-switch"
         uncheckedIcon={
-          <div
-            suppressHydrationWarning={true}
-            className="text-white text-xl flex justify-center items-center h-full"
-          >
-            {theme === "light" ? (
-              <span suppressHydrationWarning={true}>
-                <MdOutlineLightMode />
-              </span>
-            ) : (
-              <span suppressHydrationWarning={true}>
-                <CiDark />
-              </span>
-            )}
+          <div className="text-white text-xl flex justify-center items-center h-full">
+            {theme === "light" ? <MdOutlineLightMode /> : <CiDark />}
           </div>
         }
         uncheckedHandleIcon={
-          <div
-            suppressHydrationWarning={true}
-            className="flex justify-center items-center h-full text-xl"
-          >
-            {theme === "light" ? (
-              <span suppressHydrationWarning={true}>
-                <CiDark />
-              </span>
-            ) : (
-              <span suppressHydrationWarning={true}>
-                <MdOutlineLightMode />
-              </span>
-            )}
+          <div className="flex justify-center items-center h-full text-xl">
+            {theme === "light" ? <CiDark /> : <MdOutlineLightMode />}
           </div>
         }
         checkedIcon={
-          <div
-            suppressHydrationWarning={true}
-            className="text-white text-xl flex justify-center items-center h-full"
-          >
-            {theme === "light" ? (
-              <span suppressHydrationWarning={true}>
-                <MdOutlineLightMode />
-              </span>
-            ) : (
-              <span suppressHydrationWarning={true}>
-                <CiDark />
-              </span>
-            )}
+          <div className="text-white text-xl flex justify-center items-center h-full">
+            {theme === "light" ? <MdOutlineLightMode /> : <CiDark />}
           </div>
         }
         checkedHandleIcon={
-          <div
-            suppressHydrationWarning={true}
-            className="text-xl flex justify-center items-center h-full text-black"
-          >
-            {theme === "dark" ? (
-              <span suppressHydrationWarning={true}>
-                <MdOutlineLightMode />
-              </span>
-            ) : (
-              <span suppressHydrationWarning={true}>
-                <CiDark />
-              </span>
-            )}
+          <div className="text-xl flex justify-center items-center h-full text-black">
+            {theme === "dark" ? <MdOutlineLightMode /> : <CiDark />}
           </div>
         }
       />

@@ -91,7 +91,7 @@ const SurahDetails = ({ surahDetails, quranSound, quranMeta }: Props) => {
                           </button>
                         ) : (
                           <button
-                            className="text-2xl"
+                            className="text-3xl"
                             onClick={() => onPause()}
                           >
                             <FaPauseCircle />
